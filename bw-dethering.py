@@ -12,7 +12,7 @@ for y in range(img.size[1]):
 
         img.putpixel((x, y), new)
 
-        
+
         nxy = (x+1, y)
         try:
             img.putpixel(nxy, img.getpixel(nxy) + err*0.5)
@@ -33,5 +33,5 @@ for y in range(img.size[1]):
 
 name=sys.argv[-1]
 name=name.split(".")
-name='bit-'+name[0]+'.png'
+name='bw-'+name[0]+'.png'
 img.save(name, optimize=True)
